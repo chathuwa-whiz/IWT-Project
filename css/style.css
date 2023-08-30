@@ -1,6 +1,7 @@
 body{
     margin: 0px;
 }
+/* head section */
 #head{
     height: 70px;
     display: flex;
@@ -29,4 +30,9 @@ body{
     font-size: 17px;
     font-family: Arial;
     font-weight: 600;
+}
+
+/* body section */
+#body{
+    margin: 0px 20px;
 }
