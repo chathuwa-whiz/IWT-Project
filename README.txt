@@ -1,1 +1,0 @@
-pukada balanne
