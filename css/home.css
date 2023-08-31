@@ -1,0 +1,250 @@
+body{
+    margin: 0px;
+}
+/* head section */
+.head{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 1px 5px rgb(128, 128, 128);
+}
+.headingLogo{
+    height: 50px;
+    margin: 10px 0px 10px 40px;
+}
+.headingCenter{
+    display: flex;
+}
+.headingCenterItem{
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0px 20px;
+    font-family: Arial;
+    font-weight: 600;
+}
+.headingRight{
+    margin-right: 40px;
+    color: rgb(31, 31, 31);
+    font-size: 17px;
+    font-family: Arial;
+    font-weight: 600;
+}
+
+/* body section */
+
+/* option menu */
+.optionMenuContainer{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+}
+video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.optionMenu{
+    position: relative;
+    background-color: rgba(213, 213, 213, 0.87);
+    padding: 20px 40px 20px 20px;
+    border-radius: 20px;
+    width: 60%;
+}
+.optionMenuLeft{
+    width: 100%;
+    margin-right: 60px;
+}
+.optionMenuRight{
+    width: 100%;
+}
+.optionMenuInput{
+    border-radius: 15px;
+    border-style: none;
+    margin: 10px 0px 20px 0px;
+    padding: 0px 10px;
+    height: 30px;
+    width: 100%;
+}
+.optionMenuText{
+    font-family: Arial;
+    font-size: 15px;
+}
+.optionMenuBottom{
+    display: flex;
+    justify-content: space-between;
+}
+.optionMenuSubmitBtn{
+    display: flex;
+    justify-content: end;
+}
+.optionMenuSubmitBtn button{
+    border-style: none;
+    border-radius: 15px;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+    padding: 10px 30px;
+}
+.optionMenuSubmitBtn button:hover{
+    cursor: pointer;
+    background-color: rgb(0, 183, 255);
+    color: white;
+}
+
+/* why choose us */
+.chooseContainer{
+    margin: 30px 0px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+}
+.chooseBox{
+    background-color: rgb(232, 232, 232);
+    height: 100%;
+    width: 80%;
+    border-radius: 20px;
+    padding: 0px 20px;
+}
+.chooseBoxTitle{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 20px;
+}
+.chooseBoxBody{
+    display: flex;
+    justify-content: space-around;
+    display: flex;
+    overflow-x: auto;
+}
+.chooseBoxBodyItem{
+    background-color: rgb(255, 255, 255);
+    height: 170px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    padding: 20px;
+}
+.chooseBoxBodyItemImage{
+    width: 80px;
+    margin-bottom: 20px;
+}
+.chooseBoxBodyItemText{
+    font-family: Arial;
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: rgb(66, 66, 66);
+    text-align: center;
+}
+
+/* contact us in body */
+.bodyContactUsContainer{
+    margin: 30px 0px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+.bodyContactUs{
+    background-color: rgb(232, 232, 232);
+    height: 100%;
+    width: 80%;
+    border-radius: 20px;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bodyContactUsTitle{
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: 600;
+}
+.bodyContactUsOptions{
+    display: flex;
+}
+.bodyContactUsButton{
+    height: 40px;
+    width: 100px;
+    margin: 0px 50px;
+    border-style: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(69, 69, 69);
+    font-weight: 600;
+    border-radius: 10px;
+}
+.bodyContactUsButton:hover{
+    cursor: pointer;
+    background-color: rgb(0, 183, 255);
+    color: white;
+}
+.bodyContactUsicon{
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px;
+}
+
+/* body membership */
+.bodyMembershipContainer{
+    margin: 30px 0px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+.bodyMembership{
+    background-color: rgb(232, 232, 232);
+    height: 100%;
+    width: 80%;
+    border-radius: 20px;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bodyMembershipOptions{
+    display: flex;
+    align-items: center;
+}
+.bodyMembershipIcon{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+.bodyMembershipTitle{
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: 600;
+}
+.bodyMembershipBtn{
+    height: 40px;
+    width: 200px;
+    margin: 0px 50px;
+    border-style: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(69, 69, 69);
+    font-weight: 600;
+    border-radius: 10px;
+}
+.bodyMembershipBtn:hover{
+    cursor: pointer;
+    background-color: rgb(0, 183, 255);
+    color: white;
+}
+.bodyMembershipBtnTxt{
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+}
