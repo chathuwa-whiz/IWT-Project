@@ -2,45 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content=" width=device- width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
 
     <!-- main headding row -->
-    <div id="head">
+    <div class="head">
         <!-- heading left -->
-        <div id="headingLeft">
-            <div id="headingLogoContainer">
-                <img id="headingLogo" src="asset/logo.png" alt="">
+        <div class="headingLeft">
+            <div class="headingLogoContainer">
+                <img class="headingLogo" src="asset/logo.png" alt="">
             </div>
         </div>
 
         <!-- heading center -->
-        <div id="headingCenter">
-            <a id="headingCenterItem" href="#">Home</a>
-            <a id="headingCenterItem" href="#">About</a>
-            <a id="headingCenterItem" href="#">Services</a>
-            <a id="headingCenterItem" href="#">Contact</a>
+        <div class="headingCenter">
+            <a class="headingCenterItem" href="#">Home</a>
+            <a class="headingCenterItem" href="#">About</a>
+            <a class="headingCenterItem" href="#">Services</a>
+            <a class="headingCenterItem" href="#">Contact</a>
         </div>
 
         <!-- heading right -->
-        <div id="headingRight">
-            <div id="headRightItem">Hotline +94 717654324</div>
+        <div class="headingRight">
+            <div class="headRightItem">Hotline +94 717654324</div>
         </div>
     </div>
 
     <!-- main body -->
-    <div id="body">
+    <div class="body">
         <!-- option menu -->
-        <div id="optionMenu">
-            
+        <div class="optionMenuContainer">
+            <form class="optionMenu" action="php/homeOption.php">
+                <!-- pickup/return location -->
+                <label class="optionMenuText" for="">Pickup / Return Location</label><br>
+                <input type="text" placeholder="SLIIT Uni - Pittugala" class="optionMenuInput">
+                <div class="optionMenuBottom">
+                    <!-- pickup/return/number of days -->
+                    <div class="optionMenuLeft">
+                        <label class="optionMenuText" for="">Pickup Date</label><br>
+                        <input class="optionMenuInput" type="date" placeholder="03/08/2023"><br>
+                        <label class="optionMenuText" for="">Return Date</label><br>
+                        <input class="optionMenuInput" type="date" placeholder="06/08/2023"><br>
+                        <label class="optionMenuText" for="">Number of Days</label><br>
+                        <input class="optionMenuInput" type="number" placeholder="03">
+                    </div>
+                    <!-- pickup/return time/vehicle type -->
+                    <div class="optionMenuRight">
+                        <label class="optionMenuText" for="">Pickup Time</label><br>
+                        <input class="optionMenuInput" type="time" placeholder="08:00"><br>
+                        <label class="optionMenuText" for="">Return Time</label><br>
+                        <input class="optionMenuInput" type="time" placeholder="13:00"><br>
+                        <label class="optionMenuText" for="">Vehicle Type</label><br>
+                        <input class="optionMenuInput" type="number" placeholder="All">
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 
     <!-- main footer -->
-    <div id="footer"></div>
+    <div class="footer"></div>
     
 </body>
 </html>
