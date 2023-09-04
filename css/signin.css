@@ -26,7 +26,7 @@ h4{
     text-align: center;
     color: white;
 }
-.main form .details{
+.details{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between ;
@@ -58,7 +58,6 @@ form .details .input-box{
     border-radius: 17px;
     border: 1px solid #ccc;
     padding-left: 15px;
-    font-size: 16px;
     border-bottom-width: 2px;
     transition: all 0.3s ease;
     margin-bottom: 2px;
@@ -72,16 +71,12 @@ form .details .input-box{
     border-radius: 17px;
     border: 1px solid #ccc;
     padding-left: 15px;
-    font-size: 16px;
     border-bottom-width: 2px;
     transition: all 0.3s ease;
     margin: 0px 10px 0 0;
     line-height: 1.5;
 
 }
-
-
-
 .create{
     margin: 50px 25px 0px 200px;
     border: none;
@@ -96,3 +91,8 @@ form .details .input-box{
     border-radius: 20px;
     
 }
+.login{
+    margin: 20px 0px;
+    text-align: right;
+}
+.login a{text-decoration: none;}

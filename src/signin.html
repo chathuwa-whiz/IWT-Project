@@ -2,58 +2,80 @@
 <html lang="en">
 <head>
   
-    <title>Site Title</title>
+    <title>autolanka</title>
     <link rel="stylesheet" href="/css/signin.css">
 </head>
 <body>
 
     <div class="main">
+        <!-- title -->
         <h4>Create Brand New Account</h4>
+
         <form action="#">
             <div class="details">
+                <!-- first name -->
                 <div class="input-box">
-                    <span class="user">Full Name</span>
-                    <input type="text" placeholder="your full name" required>
+                    <span class="user">First Name</span>
+                    <input type="text" placeholder="your first name" required>
                 </div>
+
+                <!-- last name -->
                 <div class="input-box">
                     <span class="user">Last Name</span>
                     <input type="text" placeholder="your last name" required>
                 </div>
+
+                <!-- DOB -->
                 <div class="input-box">
                     <span class="user">Date of Birth</span>
-                    <input type="text" placeholder="dd/mm/yyyy" required>
+                    <input type="date" placeholder="dd/mm/yyyy" required>
                 </div>
+
+                <!-- mobile number -->
                 <div class="input-box">
                     <span class="user">Mobile Phone Number</span>
                     <input type="number" placeholder="Phone Number" required>
                 </div>
+
+                <!-- address -->
                 <div class="input-box1">
                     <span class="user1">Home Address</span>
                     <input type="text" placeholder="Street No" required>
-
                     <input type="text" placeholder="Town" required>
-
                     <input type="text" placeholder="City" required>
                 </div>
+
+                <!-- username -->
                 <div class="input-box1">
                     <span class="user1">Username</span>
                     <input type="text" placeholder="Type username" required>
                 </div>
+
+                <!-- new password -->
                 <div class="input-box1">
                     <span class="user1">Password</span>
                     <input type="password" placeholder="password" required>
                 </div>
+
+                <!-- confirm password -->
                 <div class="input-box1">
                     <span class="user1">Confirm Password</span>
                     <input type="password" placeholder="Confirm password" required>
                 </div>
                 
+                <!-- create account button -->
                 <input type="button" class="create" value="Create Account">
                 
             </div>
 
-            
         </form>
+        
+        <!-- login link -->
+        <div class="login">
+            Already have an account?
+            <a href="/src/login.html">Login</a>
+        </div>
+
     </div>
     </body>
     </html>
