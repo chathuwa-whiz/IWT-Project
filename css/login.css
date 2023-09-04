@@ -1,13 +1,6 @@
 
 *{
-    font-family: 'Poppins', sans serif;
-}
-body{
-    background-image: url(back2.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+    font-family: Arial;
 }
 .box{
     display: flex;
@@ -20,45 +13,32 @@ body{
     width: 350px;
     display: flex;
     flex-direction: column;
-    padding: 0 15px 0 15px;
+    padding: 70px;
+    background-color: rgb(90,86,214);
+    border-radius: 20px;
 }
-span{
-    color: #130000;
-    font-size: small;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0 10px 0;
-}
+
 header{
-    color: #0b0000;
+    color: white;
     font-size: 30px;
     display: flex;
     justify-content: center;
     padding: 10px 0 10px 0;
+    font-weight: 600;
+    margin-bottom: 30px;
 }
 .input-field{
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
-.input-field .input{
+.input{
     height: 45px;
     width: 87%;
     border: none;
     outline: none;
     border-radius: 30px;
-    color: #100000;
-    padding: 0 0 0 42px;
-    background: rgba(34, 31, 31, 0.1);
-}
-i{
-    position: relative;
-    top: -31px;
-    left: 17px;
-    color: #b89191;
-}
-::-webkit-input-placeholder{
-    color: #090000;
+    padding-left: 42px;
 }
 .submit{
     border: none;
@@ -67,28 +47,27 @@ i{
     height: 45px;
     outline: none;
     width: 100%;
-    background: rgba(246, 240, 240, 0.7);
+    background: rgb(246, 57, 139);
+    color: white;
     cursor: pointer;
-    transition: .3s;
+    transition: 300ms;
 }
 .submit:hover{
-    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
 .bottom{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-size: small;
-    color: #0b0b0b;
+    color: white;
     margin-top: 10px;
 }
 .left{
     display: flex;
+    align-items: center;
 }
 label a{
-    color: #101010;
+    color: white;
     text-decoration: none;
-}
-.top-header{
-    font-family: Arial;
 }
