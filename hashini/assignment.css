@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.main{
+    max-width: 700px;
+    width: 100%;
+    max-height: 600px;
+    height: 100%;
+    background-color: darkgray;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.h4{
+    font-size: 25px;
+    font-weight: 500;
+   
+    margin: 20px 10px 100px;
+    
+    text-align: center;
+    
+    justify-content: center;
+    
+}
+.main form .details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+    margin: 20px 20px 60px 20px;
+    line-height: 0.8;
+}
+form .details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 10px);
+}
+.details .input-box  .user{
+    display: block;
+    font-weight: 500;
+    margin: 15px;
+    width: 500px;
+}
+.details .input-box1  .user1{
+    display: block;
+    font-weight: 500;
+    margin: 15px 0px 15px 0px;
+
+}
+
+.details .input-box input{
+    height: 45px;
+    width: 275px;
+    outline: none;
+    border-radius: 17px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    margin-bottom: 2px;
+    
+
+}
+.details .input-box1 input{
+    height: 45px;
+    width: 185px;
+    outline: none;
+    border-radius: 17px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    margin: 0px 10px 0 0;
+    line-height: 1.5;
+
+}
+
+
+
+.create{
+    margin: 50px 25px 0px 200px;
+    border: none;
+    color: rgb(3, 3, 3);
+    padding: 17px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    
+}
