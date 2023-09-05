@@ -125,7 +125,7 @@ video {
 .chooseBoxBody{
     display: flex;
     justify-content: space-around;
-    display: flex;
+    align-items: center;
     overflow-x: auto;
 }
 .chooseBoxBodyItem{
@@ -150,6 +150,10 @@ video {
     color: rgb(66, 66, 66);
     text-align: center;
 }
+@media screen and (max-width: 940px) {
+    
+}
+
 
 /* contact us in body */
 .bodyContactUsContainer{

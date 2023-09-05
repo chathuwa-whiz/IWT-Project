@@ -1,25 +1,43 @@
 *{
     margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Arial;
 }
-body{
-    width: 100%;
-    background-color:#2c677c;
+/* head section */
+.head{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 1px 5px rgb(128, 128, 128);
 }
+.headingLogo{
+    height: 100px;
+    margin: 10px 0px 10px 40px;
+}
+.headingCenter{
+    display: flex;
+}
+.headingCenterItem{
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0px 20px;
+    font-family: Arial;
+    font-weight: 600;
+}
+.headingRight{
+    margin-right: 40px;
+    color: rgb(31, 31, 31);
+    font-size: 17px;
+    font-family: Arial;
+    font-weight: 600;
+}
+
+/* body */
 .title h1{
     text-align: center;
     padding-top:  50px; 
     font-size: 42px;
-}
-.title h1::after{
-    content: "";
-    height: 4px;
-    width: 230px;
-    background-color: #000;
-    display: block;
-    margin: auto;
 }
 .services{
     width: 85%;
@@ -37,13 +55,13 @@ body{
     flex-direction: column;
     margin: 0px 20px;
     padding: 20px 20px;
-    background-color: #efefef;
     border-radius: 10px;
+    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 .card:hover{
-    background-color: #b8d4de;
-    transition: 0.4s ease;
+    background-color: rgb(201, 199, 252);
+    transition: 0.4s;
 }
 .card.icon{
     font-size: 35px;
@@ -52,7 +70,6 @@ body{
 
 .card h2{
     font-size: 28px;
-    color: #c94f4f;
     margin-bottom: 20px;
 }
 .card p{
@@ -60,19 +77,18 @@ body{
     margin-bottom: 30px;
     line-height: 1.5;
     color: #5e5e5e;
-
 }
 .button{
     font-size: 15px;
     text-decoration: none;
     color: #fff;
-    background-color: #2c677c;
+    background-color: rgb(90,86,214);
     padding: 8px 12px;
     border-radius: 5px;
     letter-spacing: 1px;
 }
 .button:hover{
-    background-color: #c94f4f;
+    background-color: rgb(246, 57, 139);
     transition: 0.4s ease;
 }
 @media screen and (max-width: 940px){
@@ -85,4 +101,17 @@ body{
         display: flex;
         margin: 20px 0px;
     }
+}
+
+/* footer */
+.footer{
+    position: fixed;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial;
+    box-shadow: 1px 1px 5px rgb(128, 128, 128);
 }
