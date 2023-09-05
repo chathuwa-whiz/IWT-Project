@@ -253,3 +253,13 @@ video {
     color: white;
 }
 .bodyMembershipBtnTxt:hover{color: rgb(209, 209, 209);}
+
+/* footer */
+.footer{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial;
+    box-shadow: 1px 1px 5px rgb(128, 128, 128);
+}
