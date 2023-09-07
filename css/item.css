@@ -121,6 +121,18 @@
 .airButton{
     margin-right: 20px;
 }
+.filterButton{
+    color: white;
+    background-color: rgb(246, 57, 139);
+    border: none;
+    margin-right: 50px;
+    border-radius: 10px;
+    height: 30px;
+}
+.filterButton:hover{
+    cursor: pointer;
+    background-color: rgb(253, 81, 155);
+}
 
     /* body right side */
 .itemContainer{
@@ -173,6 +185,12 @@
     border-radius: 5px;
     height: 30px;
     width: 100px;
+    color: white;
+    background-color: rgb(246, 57, 139);
+}
+.itemButton:hover{
+    cursor: pointer;
+    background-color: rgb(253, 81, 155);
 }
 
 /* footer */
