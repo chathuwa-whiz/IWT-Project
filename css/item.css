@@ -1,0 +1,87 @@
+.mainBody{
+    display: flex;
+    font-family: Arial;
+}
+.mainBodyLeft{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px 0px 50px;
+    background-color: rgb(90,86,214);
+}
+.mainBodyRight{
+    flex: 8;
+    padding: 10px 0px 0px 50px;
+}
+
+.vehicleType{
+    margin-bottom: 50px;
+    color: white;
+}
+.vehicleTypeItemsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.vehicleTypeItemsContainer{
+    margin: 20px;
+}
+.vehicleTypeItem{
+    margin: 7px 0px;
+}
+.vehiclePrice{
+    margin-bottom: 50px;
+    color: white;
+}
+.vehiclePriceContainer{
+    margin: 20px;
+}
+.vehiclePriceItem{
+    border-radius: 10px;
+    height: 30px;
+    border-color: rgb(161, 161, 161);
+    margin-bottom: 10px;
+}
+.passengersContainer{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: white;
+}
+.passengersInput{
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.seatsContainer{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: white;
+}
+.seatsInput{
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.bagsContainer{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    color: white;
+}
+.bagsInput{
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.airConditionContainer{
+    display: flex;
+    color: white;
+}
+.airButton{
+    margin-right: 20px;
+}
