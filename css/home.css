@@ -126,7 +126,6 @@ video {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    overflow-x: auto;
 }
 .chooseBoxBodyItem{
     background-color: rgb(255, 255, 255);
@@ -149,6 +148,18 @@ video {
     font-weight: 600;
     color: rgb(66, 66, 66);
     text-align: center;
+}
+@media screen and (max-width: 1000px){
+    .chooseContainer{
+        height: 1000px;
+    }
+    .chooseBoxBody{
+        flex-direction: column;
+    }
+    .chooseBoxBodyItem{
+        width: 80%;
+        margin-bottom: 10px;
+    }
 }
 
 

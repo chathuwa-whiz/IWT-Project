@@ -4,10 +4,10 @@
 }
 .box{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 90vh;
-    font-family: Arial;
 }
 .container{
     width: 350px;
@@ -71,3 +71,13 @@ label a{
     color: white;
     text-decoration: none;
 }
+.createAcc{
+    margin-top: 20px;
+    text-align: end;
+}
+.createAcc a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(246, 57, 139);
+}
+.createAcc a:hover{color: rgb(255, 131, 184);}

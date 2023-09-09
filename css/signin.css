@@ -92,7 +92,12 @@ form .details .input-box{
     
 }
 .login{
-    margin: 20px 0px;
-    text-align: right;
+    margin-top: 20px;
+    text-align: center;
 }
-.login a{text-decoration: none;}
+.login a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(246, 57, 139);
+}
+.login a:hover{color: rgb(255, 131, 184);}
