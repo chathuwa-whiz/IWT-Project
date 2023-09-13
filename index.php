@@ -1,3 +1,46 @@
+<?php
+
+    //connect to database
+    $conn = mysqli_connect('localhost', 'root', '', 'autolanka');
+    
+    //check connection
+    if(!$conn) {
+        echo "<script>alert('Connection Fail!');</script>";
+    }
+
+    //send data
+    if(isset($_POST['submit']))
+    {
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
+        $birthday = $_POST['birthday'];
+        $number = $_POST['number'];
+        $street = $_POST['street'];
+        $town = $_POST['town'];
+        $city = $_POST['city'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $confirm_pass = $_POST['confirm-password'];
+
+        if($password != $confirm_pass) {
+            echo "<script>alert('Password not match');</script>";
+        }
+
+        $sql = "INSERT INTO user_table (Firstname, Lastname, Birthday, Number, Street, Town, City, Username, Password) 
+                VALUES ('$firstname', '$lastname', '$birthday', '$number', '$street', '$town', '$city', '$username', '$password')";
+
+        try {
+            mysqli_query($conn, $sql);
+            echo "<script>alert('Registration Success');";
+        } 
+        catch (mysqli_sql_exception) {
+            echo "<script>alert('Registration Failed');</script>";
+        }
+    }
+    mysqli_close($conn);
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -11,60 +11,60 @@
         <!-- title -->
         <h4>Create Brand New Account</h4>
 
-        <form action="#">
+        <form action="../index.php" method="POST">
             <div class="details">
                 <!-- first name -->
                 <div class="input-box">
                     <span class="user">First Name</span>
-                    <input type="text" placeholder="your first name" required>
+                    <input type="text" placeholder="your first name" name="firstname" required>
                 </div>
 
                 <!-- last name -->
                 <div class="input-box">
                     <span class="user">Last Name</span>
-                    <input type="text" placeholder="your last name" required>
+                    <input type="text" placeholder="your last name" name="lastname" required>
                 </div>
 
                 <!-- DOB -->
                 <div class="input-box">
                     <span class="user">Date of Birth</span>
-                    <input type="date" placeholder="dd/mm/yyyy" required>
+                    <input type="date" placeholder="dd/mm/yyyy" name="birthday" required>
                 </div>
 
                 <!-- mobile number -->
                 <div class="input-box">
                     <span class="user">Mobile Phone Number</span>
-                    <input type="number" placeholder="Phone Number" required>
+                    <input type="number" placeholder="Phone Number" name="number" required>
                 </div>
 
                 <!-- address -->
                 <div class="input-box1">
                     <span class="user1">Home Address</span>
-                    <input type="text" placeholder="Street No" required>
-                    <input type="text" placeholder="Town" required>
-                    <input type="text" placeholder="City" required>
+                    <input type="text" placeholder="Street No" name="street" required>
+                    <input type="text" placeholder="Town" name="town" required>
+                    <input type="text" placeholder="City" name="city" required>
                 </div>
 
                 <!-- username -->
                 <div class="input-box1">
                     <span class="user1">Username</span>
-                    <input type="text" placeholder="Type username" required>
+                    <input type="text" placeholder="Type username" name="username" required>
                 </div>
 
                 <!-- new password -->
                 <div class="input-box1">
                     <span class="user1">Password</span>
-                    <input type="password" placeholder="password" required>
+                    <input type="password" placeholder="password" name="password" required>
                 </div>
 
                 <!-- confirm password -->
                 <div class="input-box1">
                     <span class="user1">Confirm Password</span>
-                    <input type="password" placeholder="Confirm password" required>
+                    <input type="password" placeholder="Confirm password" name="confirm-password" required>
                 </div>
                 
                 <!-- create account button -->
-                <input type="button" class="create" value="Create Account">
+                <input type="submit" name="submit" class="create" value="Create Account">
                 
             </div>
 
