@@ -1,0 +1,83 @@
+
+*{
+    font-family: Arial;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+.container{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    background-color: rgb(90,86,214);
+    border-radius: 20px;
+}
+
+header{
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.input{
+    height: 45px;
+    width: 87%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding-left: 42px;
+}
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    background: rgb(246, 57, 139);
+    color: white;
+    cursor: pointer;
+    transition: 300ms;
+}
+.submit:hover{
+    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: small;
+    color: white;
+    margin-top: 10px;
+}
+.left{
+    display: flex;
+    align-items: center;
+}
+label a{
+    color: white;
+    text-decoration: none;
+}
+.createAcc{
+    margin-top: 20px;
+    text-align: end;
+}
+.createAcc a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(246, 57, 139);
+}
+.createAcc a:hover{color: rgb(255, 131, 184);}
