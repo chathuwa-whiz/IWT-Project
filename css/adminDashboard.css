@@ -33,8 +33,49 @@ body{
 }
 
 /* body */
-.vehicleContainer{}
-
+.vehicleContainer{
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+.vehicleItem{
+    background-color: aliceblue;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.vehicleItemLeft{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial;
+    font-weight: bold;
+    color: rgb(90,86,214);
+}
+.vehicleItemRight{
+    display: flex;
+    align-items: center;
+}
+.vehicleItemEdit{
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    color: white;
+    background-color: rgb(90,86,214);
+}
+.vehicleItemDelete{
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    color: white;
+    background-color: rgb(246, 57, 139);
+}
+.vehicleItem button:hover{
+    cursor: pointer;
+}
 /* footer */
 .footer{
     height: 70px;

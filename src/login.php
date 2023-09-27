@@ -1,3 +1,23 @@
+<?php
+    include 'connect.php';
+
+    if(isset($_POST["submit"]))
+    {
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        //admin login
+        if($username === 'admin' && $password === 'admin')
+        {
+            header('location:adminDashboard.php');
+        }
+        else
+        {
+            echo '<script>alert(you are not admin);</script>';
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,11 +37,9 @@
             <!--create input boxes-->
             <div class="input-field">
                 <input type="text" class="input" placeholder="Username" name="username" required>
-                
             </div>
             <div class="input-field">
                 <input type="password" class="input" placeholder="Password" name="password" required>
-                
             </div>
 
             <!--create login button-->

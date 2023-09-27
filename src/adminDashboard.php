@@ -1,3 +1,7 @@
+<?php
+    include 'connect.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +40,21 @@
     <div class="body">
         
         <!-- vehicle container -->
-        <div class="vehicleContainer"></div>
+        <div class="vehicleContainer">
+            <div class="vehicleItem">
+                <!-- left side contents -->
+                <div class="vehicleItemLeft">
+                    <span class="vehicleItemId">001</span>
+                    <span class="vehicleItemBrand">SUZUKI</span>
+                    <span class="vehicleItemModel">Alto</span>
+                </div>
+                <!-- right side contents -->
+                <div class="vehicleItemRight">
+                    <button class="vehicleItemEdit">Edit</button>
+                    <button class="vehicleItemDelete">Delete</button>
+                </div>
+            </div>
+        </div>
 
         <!-- users container -->
         <div class="userContainer"></div>

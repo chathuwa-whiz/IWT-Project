@@ -1,12 +1,6 @@
 <?php
 
-    //connect to database
-    $conn = mysqli_connect('localhost', 'root', '', 'autolanka');
-    
-    //check connection
-    if(!$conn) {
-        echo "<script>alert('Connection Fail!');</script>";
-    }
+    include 'connect.php';
 
     //get data from signin.html
     if(isset($_POST['submit']))
