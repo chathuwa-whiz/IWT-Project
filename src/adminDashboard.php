@@ -48,7 +48,8 @@
         <!-- vehicle container -->
         <div class="vehicleContainer">
             <?php
-                while($rowVehicle = mysqli_fetch_assoc($vehicleArray)){
+                for($i = 0; $i < 5; $i++){
+                    $rowVehicle = mysqli_fetch_assoc($vehicleArray);
                     echo '
                         <div class="vehicleItem">
                             <!-- left side contents -->

@@ -27,9 +27,18 @@ label{
     border-radius: 5px;
     border: none;
 }
-.gear{
+.gear, .airCondition, .type{
     display: flex;
     padding: 10px 0px;
+}
+.gear .inputs{
+    margin-left: 200px;
+}
+.airCondition .inputs{
+    margin-left: 150px;
+}
+.type .inputs{
+    margin-left: 180px;
 }
 button{
     border: none;
