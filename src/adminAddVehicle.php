@@ -18,7 +18,7 @@
         
         try {
             mysqli_query($conn, $sql);
-            header('location:adminDashboard.php');
+            // header('location:adminDashboard.php');
 
         } catch (mysqli_sql_exception $e) {
             echo "<script>alert('Operation Failed!');</script>";

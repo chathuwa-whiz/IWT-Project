@@ -27,6 +27,10 @@ label{
     border-radius: 5px;
     border: none;
 }
+.gear{
+    display: flex;
+    padding: 10px 0px;
+}
 button{
     border: none;
     border-radius: 10px;
