@@ -17,7 +17,7 @@
         $confirm_pass = $_POST['confirm-password'];
 
         //send data to database
-        $sql = "INSERT INTO user_table (Firstname, Lastname, Birthday, Number, Street, Town, City, Username, Password) 
+        $create = "INSERT INTO user_table (Firstname, Lastname, Birthday, Number, Street, Town, City, Username, Password) 
                 VALUES ('$firstname', '$lastname', '$birthday', '$number', '$street', '$town', '$city', '$username', '$password')";
 
         if($password != $confirm_pass) {
@@ -28,7 +28,7 @@
         }
         else {
             try {
-                mysqli_query($conn, $sql);
+                mysqli_query($conn, $create);
                 echo "<script>alert('Registration Success');</script>";
             } 
             catch (mysqli_sql_exception) {

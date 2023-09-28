@@ -6,14 +6,14 @@
         $username = $_POST["username"];
         $password = $_POST["password"];
 
-        //admin login
-        if($username === 'admin' && $password === 'admin')
+        //admin login is hard coded for now
+        if($username == 'admin' && $password == 'admin')
         {
             header('location:adminDashboard.php');
         }
         else
         {
-            echo '<script>alert(you are not admin);</script>';
+            header('location:../index.html');
         }
     }
 ?>
@@ -32,7 +32,7 @@
 <body>
     <!--create header-->
     <div class="box">
-        <form action="" method="post" class="container">
+        <form action="login.php" method="post" class="container">
             <header>Login</header>
             <!--create input boxes-->
             <div class="input-field">
@@ -44,7 +44,7 @@
 
             <!--create login button-->
             <div class="input-field">
-                <input type="submit" class="submit" value="Login">
+                <input type="submit" class="submit" value="Login" name="submit">
             </div>
 
             <!-- bottom options -->

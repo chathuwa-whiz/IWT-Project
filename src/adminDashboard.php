@@ -1,5 +1,12 @@
 <?php
     include 'connect.php';
+
+    //read data from database
+    $readVehicle = "SELECT * FROM vehicle_table";
+    $readUser = "SELECT * FROM user_table";
+
+    $vehicleArray = mysqli_query($conn, $readVehicle);
+    $userArray = mysqli_query($conn, $readUser);  
 ?>
 
 <!DOCTYPE html>
@@ -23,11 +30,10 @@
 
         <!-- heading center -->
         <div class="headingCenter">
-            <a class="headingCenterItem" href="#">Home</a>
-            <a class="headingCenterItem" href="../src/aboutus.html">About</a>
-            <a class="headingCenterItem" href="../src/services.html">Services</a>
-            <a class="headingCenterItem" href="../src/contactus.html">Contact</a>
-            <a href="../src/item.html">item page</a>
+            <a class="headingCenterItem" href="#">Dashboard</a>
+            <a class="headingCenterItem" href="adminVehicleDashboard.php">Vehicles</a>
+            <a class="headingCenterItem" href="adminUserDashboard.php">Users</a>
+            <a class="headingCenterItem" href="adminAddVehicle.php">New Vehicle</a>
         </div>
 
         <!-- heading right -->
@@ -41,19 +47,26 @@
         
         <!-- vehicle container -->
         <div class="vehicleContainer">
-            <div class="vehicleItem">
-                <!-- left side contents -->
-                <div class="vehicleItemLeft">
-                    <span class="vehicleItemId">001</span>
-                    <span class="vehicleItemBrand">SUZUKI</span>
-                    <span class="vehicleItemModel">Alto</span>
-                </div>
-                <!-- right side contents -->
-                <div class="vehicleItemRight">
-                    <button class="vehicleItemEdit">Edit</button>
-                    <button class="vehicleItemDelete">Delete</button>
-                </div>
-            </div>
+            <?php
+                while($rowVehicle = mysqli_fetch_assoc($vehicleArray)){
+                    echo '
+                        <div class="vehicleItem">
+                            <!-- left side contents -->
+                            <div class="vehicleItemLeft">
+                                <span class="vehicleItemId">'.$rowVehicle["VehicleID"].'</span>
+                                <span class="vehicleItemBrand">'.$rowVehicle["Brand"].'</span>
+                                <span class="vehicleItemModel">'.$rowVehicle["Model"].'</span>
+                            </div>
+                            <!-- right side contents -->
+                            <div class="vehicleItemRight">
+                                <button onclick="location.href=\'aboutus.html\'" class="vehicleItemEdit">Edit</button>
+                                <button onclick="location.href=\'deleteVehicle.php?deleteVehicleId='.$rowVehicle["VehicleID"].'\'" class="vehicleItemDelete">Delete</button>
+                            </div>
+                        </div>
+                    ';
+                }
+            ?>
+            
         </div>
 
         <!-- users container -->
