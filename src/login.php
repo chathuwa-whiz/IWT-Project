@@ -13,7 +13,7 @@
         }
         else
         {
-            header('location:signin.php');
+            echo '<script>alert("You are not an Admin");</script>';
         }
     }
 ?>
