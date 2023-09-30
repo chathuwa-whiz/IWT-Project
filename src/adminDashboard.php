@@ -46,32 +46,62 @@
     <div class="body">
         
         <!-- vehicle container -->
-        <div class="vehicleContainer">
+        <div class="container">
             <?php
                 for($i = 0; $i < 5; $i++){
-                    $rowVehicle = mysqli_fetch_assoc($vehicleArray);
+                    $vehicle = mysqli_fetch_assoc($vehicleArray);
                     echo '
-                        <div class="vehicleItem">
+                        <div class="element">
                             <!-- left side contents -->
-                            <div class="vehicleItemLeft">
-                                <span class="vehicleItemId">'.$rowVehicle["VehicleID"].'</span>
-                                <span class="vehicleItemBrand">'.$rowVehicle["Brand"].'</span>
-                                <span class="vehicleItemModel">'.$rowVehicle["Model"].'</span>
+                            <div class="elementLeft">
+                                <span class="elementDetail">Vehicle ID : '.$vehicle["VehicleID"].'</span>
+                                <span class="elementDetail">Brand : '.$vehicle["Brand"].'</span>
+                                <span class="elementDetail">Model : '.$vehicle["Model"].'</span>
                             </div>
                             <!-- right side contents -->
-                            <div class="vehicleItemRight">
-                                <button onclick="location.href=\'aboutus.html\'" class="vehicleItemEdit">Edit</button>
-                                <button onclick="location.href=\'deleteVehicle.php?deleteVehicleId='.$rowVehicle["VehicleID"].'\'" class="vehicleItemDelete">Delete</button>
+                            <div class="elementRight">
+                                <button onclick="location.href=\'aboutus.html\'" class="elementEdit">Edit</button>
+                                <button onclick="location.href=\'deleteVehicle.php?deleteVehicleId='.$vehicle["VehicleID"].'\'" class="elementDelete">Delete</button>
                             </div>
                         </div>
                     ';
                 }
             ?>
+
+            <!-- view more button -->
+            <button onclick="location.href='adminVehicleDashboard.php'" class="elementMore">View More</button>
             
         </div>
 
+        <hr style="margin:0px 50px">
+
         <!-- users container -->
-        <div class="userContainer"></div>
+        <div class="container">
+            <?php
+                for($i = 0; $i < 5; $i++){
+                    $user = mysqli_fetch_assoc($userArray);
+                    echo '
+                        <div class="element">
+                            <!-- left side contents -->
+                            <div class="elementLeft">
+                                <span class="elementDetail">User ID : '.$user["UserID"].'</span>
+                                <span class="elementDetail">Name : '.$user["Firstname"].' '.$user["Lastname"].'</span>
+                                <span class="elementDetail">Mobile : '.$user["Number"].'</span>
+                            </div>
+                            <!-- right side contents -->
+                            <div class="elementRight">
+                                <button onclick="location.href=\'aboutus.html\'" class="elementEdit">Edit</button>
+                                <button onclick="location.href=\'deleteUser.php?deleteUserId='.$user["UserID"].'\'" class="elementDelete">Delete</button>
+                            </div>
+                        </div>
+                    ';
+                }
+            ?>
+
+            <!-- view more button -->
+            <button onclick="location.href='adminUserDashboard.php'" class="elementMore">View More</button>
+
+        </div>
         
     </div>
 
