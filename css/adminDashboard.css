@@ -54,6 +54,17 @@ body{
     font-weight: bold;
     color: rgb(90,86,214);
 }
+.elementImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.elementImage img{
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 .elementRight{
     display: flex;
     align-items: center;
