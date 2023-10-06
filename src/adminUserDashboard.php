@@ -57,9 +57,15 @@
                         <span class="elementDetail">Name : '.$user["Firstname"].' '.$user["Lastname"].'</span>
                         <span class="elementDetail">Mobile : '.$user["Number"].'</span>
                     </div>
+
+                    <!-- center contents -->
+                    <div class="elementImage">
+                        <img src="'.$user["Image"].'">
+                    </div>
+                    
                     <!-- right side contents -->
                     <div class="elementRight">
-                        <button onclick="location.href=\'aboutus.html\'" class="elementEdit">Edit</button>
+                        <button onclick="location.href=\'editUser.php?editUserId='.$user["UserID"].'\'" class="elementEdit">Edit</button>
                         <button onclick="location.href=\'deleteUser.php?deleteUserId='.$user["UserID"].'\'" class="elementDelete">Delete</button>
                     </div>
                 </div>

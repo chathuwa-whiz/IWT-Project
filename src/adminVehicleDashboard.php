@@ -57,9 +57,15 @@
                             <span class="elementDetail">Brand : '.$vehicle["Brand"].'</span>
                             <span class="elementDetail">Model : '.$vehicle["Model"].'</span>
                         </div>
+
+                        <!-- center contents -->
+                        <div class="elementImage">
+                            <img src="'.$vehicle["Image"].'">
+                        </div>
+
                         <!-- right side contents -->
                         <div class="elementRight">
-                            <button onclick="location.href=\'aboutus.html\'" class="elementEdit">Edit</button>
+                            <button onclick="location.href=\'editVehicle.php?editVehicleId='.$vehicle["VehicleID"].'\'" class="elementEdit">Edit</button>
                             <button onclick="location.href=\'deleteVehicle.php?deleteVehicleId='.$vehicle["VehicleID"].'\'" class="elementDelete">Delete</button>
                         </div>
                     </div>

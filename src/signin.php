@@ -1,4 +1,4 @@
-<?php
+ <?php
 
     include 'connect.php';
 
@@ -15,10 +15,11 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
         $confirm_pass = $_POST['confirm-password'];
+        $avatar = $_POST['image'];
 
         //send data to database
-        $create = "INSERT INTO user_table (Firstname, Lastname, Birthday, Number, Street, Town, City, Username, Password) 
-                VALUES ('$firstname', '$lastname', '$birthday', '$number', '$street', '$town', '$city', '$username', '$password')";
+        $create = "INSERT INTO user_table (Firstname, Lastname, Birthday, Number, Street, Town, City, Username, Password, Image) 
+                VALUES ('$firstname', '$lastname', '$birthday', '$number', '$street', '$town', '$city', '$username', '$password', '$avatar')";
 
         if($password != $confirm_pass) {
             echo "<script>alert('Password does not match. Please check again');</script>";
@@ -104,6 +105,11 @@
                 <div class="input-box1">
                     <span class="user1">Confirm Password</span>
                     <input type="password" placeholder="Confirm password" name="confirm-password" required>
+                </div>
+
+                <div class="input-box1">
+                    <span class="user1">Avatar</span>
+                    <input type="text" placeholder="Input Avatar Link" name="image">
                 </div>
                 
                 <!-- create account button -->
