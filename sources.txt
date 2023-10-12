@@ -1,2 +1,0 @@
-background video : https://alvarotrigo.com/blog/background-video-css/
-// hey there

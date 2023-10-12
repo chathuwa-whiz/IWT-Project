@@ -27,11 +27,14 @@
         $bags = $_POST['bags'];
         $image = $_POST['image'];
         $extraRs =$_POST['extra'];
+        $dayRs = $_POST['dayCharge'];
+        $passengers = $_POST['passengers'];
+        $doors = $_POST['doors'];
         $gear = $_POST['gear'];
         $type = $_POST['type'];
         $airCondition =  $_POST['airCondition'];
 
-        $update = "UPDATE vehicle_table SET Brand = '$brand' , Model = '$model' , Image = '$image' , Bags = '$bags' , Seats = '$seat' , AirCondition = '$airCondition' , VehicleType = '$type' , GearType = '$gear' , ExtraCharge = '$extraRs'
+        $update = "UPDATE vehicle_table SET Brand = '$brand' , Model = '$model' , Image = '$image' , Bags = '$bags' , Seats = '$seat' , AirCondition = '$airCondition' , VehicleType = '$type' , GearType = '$gear' , ExtraCharge = '$extraRs' , DayCharge = '$dayRs' , Passengers = '$passengers' , Doors = '$doors' 
                     WHERE VehicleID = $vehicleId";
         
         try {
@@ -95,6 +98,21 @@
         <div class="extra">
             <label for="extra">Rupees per extra KM</label>
             <input type="number" placeholder="1000" name="extra" value = <?php echo $data["ExtraCharge"]; ?>>
+        </div>
+        <!-- Day Charge -->
+        <div class="extra">
+            <label for="extra">Rupees per Day</label>
+            <input type="number" placeholder="800" name="dayCharge">
+        </div>
+        <!-- Passengers -->
+        <div class="extra">
+            <label for="extra">Number of Passengers</label>
+            <input type="number" placeholder="4" name="passengers">
+        </div>
+        <!-- Doors -->
+        <div class="extra">
+            <label for="extra">Doors</label>
+            <input type="number" placeholder="4" name="doors">
         </div>
         <!-- gear -->
         <div class="gear">

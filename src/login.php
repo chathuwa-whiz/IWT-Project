@@ -1,19 +1,29 @@
 <?php
     include 'connect.php';
+    session_start();
 
     if(isset($_POST["submit"]))
-    {
+    {        
+        // keyboard inputted data
         $username = $_POST["username"];
         $password = $_POST["password"];
 
-        //admin login is hard coded for now
+        // get all users from database
+        $read = "SELECT * FROM user_table WHERE Username = '$username' && Password = '$password'";
+        $query = mysqli_query($conn, $read);
+        $data = mysqli_fetch_assoc($query);
+
+        // admin login is hard coded
         if($username == 'admin' && $password == 'admin')
         {
             header('location:adminDashboard.php');
         }
-        else
+        else if($data["Username"] == $username && $data["Password"] == $password)
         {
-            echo '<script>alert("You are not an Admin");</script>';
+            $_SESSION["name"] = $data["Firstname"];
+            header("Location:../index.php");
+        } else {
+            echo "<script>alert('Username or Password incorrect');</script>";
         }
     }
 ?>
@@ -36,10 +46,10 @@
             <header>Login</header>
             <!--create input boxes-->
             <div class="input-field">
-                <input type="text" class="input" placeholder="Username" name="username" required>
+                <input type="text" class="input" id="username" placeholder="Username" name="username" required>
             </div>
             <div class="input-field">
-                <input type="password" class="input" placeholder="Password" name="password" required>
+                <input type="password" class="input" id="password" placeholder="Password" name="password" required>
             </div>
 
             <!--create login button-->

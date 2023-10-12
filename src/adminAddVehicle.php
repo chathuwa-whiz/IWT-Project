@@ -65,7 +65,22 @@
         <!-- Extra KM -->
         <div class="extra">
             <label for="extra">Rupees per extra KM</label>
-            <input type="number" placeholder="1000" name="extra">
+            <input type="number" placeholder="400" name="extra">
+        </div>
+        <!-- Day Charge -->
+        <div class="extra">
+            <label for="extra">Rupees per Day</label>
+            <input type="number" placeholder="800" name="dayCharge">
+        </div>
+        <!-- Passengers -->
+        <div class="extra">
+            <label for="extra">Number of Passengers</label>
+            <input type="number" placeholder="4" name="passengers">
+        </div>
+        <!-- Doors -->
+        <div class="extra">
+            <label for="extra">Doors</label>
+            <input type="number" placeholder="4" name="doors">
         </div>
         <!-- gear -->
         <div class="gear">

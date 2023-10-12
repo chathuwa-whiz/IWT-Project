@@ -1,8 +1,15 @@
+<?php
+
+    session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content=" width=device- width, initial-scale=1.0">
+    <script src="script.js"></script>
     <link rel="stylesheet" href="css/home.css">
     <title>Autolanka</title>
 </head>
@@ -23,56 +30,57 @@
             <a class="headingCenterItem" href="src/aboutus.html">About</a>
             <a class="headingCenterItem" href="src/services.html">Services</a>
             <a class="headingCenterItem" href="src/contactus.html">Contact</a>
-            <a href="src/item.html">item page</a>
         </div>
 
         <!-- heading right -->
         <div class="headingRight">
-            <div class="headRightItem">Hotline +94 717654324</div>
+            <div class="headRightItem">
+                <?php echo $_SESSION ? 'Hellow '.$_SESSION["name"].'' : 'Hotline +94 717654324'; ?>
+            </div>
         </div>
     </div>
 
     <!-- main body -->
     <div class="body">
-        
+        <script></script>
         <!-- option menu -->
         <div class="optionMenuContainer">
             <!-- video background -->
             <video autoplay muted loop src="asset/home/home-background-video.mp4"></video>
 
             <!-- form -->
-            <form class="optionMenu" action="">
+            <form class="optionMenu" action="src/selectVehicle.php" method="GET">
                 <!-- pickup/return location -->
                 <label class="optionMenuText" for="">Pickup / Return Location</label><br>
-                <input type="text" placeholder="SLIIT Uni - Pittugala" class="optionMenuInput">
+                <input type="text" placeholder="SLIIT Uni - Pittugala" class="optionMenuInput" name="location">
 
                 <div class="optionMenuBottom">
                     <!-- pickup/return/number of days -->
                     <div class="optionMenuLeft">
                         <label class="optionMenuText" for="">Pickup Date</label><br>
-                        <input class="optionMenuInput" type="date" placeholder="03/08/2023"><br>
+                        <input class="optionMenuInput" type="date" placeholder="03/08/2023" name="pickup_date"><br>
                         <label class="optionMenuText" for="">Return Date</label><br>
-                        <input class="optionMenuInput" type="date" placeholder="06/08/2023"><br>
+                        <input class="optionMenuInput" type="date" placeholder="06/08/2023" name="return_date"><br>
                         <label class="optionMenuText" for="">Number of Days</label><br>
-                        <input class="optionMenuInput" type="number" placeholder="03">
+                        <input class="optionMenuInput" type="number" placeholder="03" name="numofdays">
                     </div>
                     <!-- pickup/return time/vehicle type -->
                     <div class="optionMenuRight">
                         <label class="optionMenuText" for="">Pickup Time</label><br>
-                        <input class="optionMenuInput" type="time" placeholder="08:00"><br>
+                        <input class="optionMenuInput" type="time" placeholder="08:00" name="pickup_time"><br>
                         <label class="optionMenuText" for="">Return Time</label><br>
-                        <input class="optionMenuInput" type="time" placeholder="13:00"><br>
+                        <input class="optionMenuInput" type="time" placeholder="13:00" name="return_time"><br>
                         <label class="optionMenuText" for="">Vehicle Type</label><br>
-                        <select class="optionMenuInput">
-                            <option value="all">SUVs & Cabs</option>
-                            <option value="suv">Cars</option>
-                            <option value="suv">Vans & Busses</option>
-                            <option value="suv">MotorBikes</option>
-                            <option value="suv">Tuk Tuks</option>
-                            <option value="suv">Utility Vehicles</option>
+                        <select class="optionMenuInput" name="vehicle_type">
+                            <option value="SUV and Cabs">SUVs & Cabs</option>
+                            <option value="Cars">Cars</option>
+                            <option value="Van and Busses">Vans & Busses</option>
+                            <option value="Motorbikes">MotorBikes</option>
+                            <option value="Tuk Tuk">Tuk Tuks</option>
+                            <option value="Utility Vehicles">Utility Vehicles</option>
                         </select>
                         <div class="optionMenuSubmitBtn">
-                            <button type="submit">Submit</button>
+                            <button type="submit">Search</button>
                         </div>
                     </div>
                 </div>
@@ -129,7 +137,15 @@
                 </div>
                 <!-- membership right side -->
                 <div class="bodyMembershipOptions">
-                    <button onclick="location.href = 'src/login.php'" class="bodyMembershipBtn">Login</button>
+                    <button onclick="location.href = 'src/login.php';" class="bodyMembershipBtn">
+                        <?php
+                            if($_SESSION) {
+                                echo 'Logout';
+                            } else {
+                                echo 'Login';
+                            }
+                        ?>
+                    </button>
                     <a href="src/aboutus.html" class="bodyMembershipBtnTxt">Who are we ?</a>
                 </div>
             </div>
