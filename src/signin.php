@@ -30,7 +30,11 @@
         else {
             try {
                 mysqli_query($conn, $create);
-                echo "<script>alert('Registration Success');</script>";
+                echo "<script>
+                       if(confirm('Registration Successful')) {
+                           location.href = 'login.php';
+                       }
+                       </script>";
             } 
             catch (mysqli_sql_exception) {
                 echo "<script>alert('Registration Failed');</script>";

@@ -2,17 +2,43 @@
     include 'connect.php';
     session_start();
 
-    $vehicleType = $_GET['vehicle_type'];
-    $location = $_GET['location'];
-    $pickupDate = $_GET['pickup_date'];
-    $returnDate = $_GET['return_date'];
-    $pickupTime = $_GET['pickup_time'];
-    $returnTime = $_GET['return_time'];
-    $numOfDays = $_GET['numofdays'];
+    // results will show according to the index.php page
+    if(isset($_GET["vehicle_type"]))
+    {
+        $vehicleType = $_GET['vehicle_type'];
+        $location = $_GET['location'];
+        $pickupDate = $_GET['pickup_date'];
+        $returnDate = $_GET['return_date'];
+        $pickupTime = $_GET['pickup_time'];
+        $returnTime = $_GET['return_time'];
+        $numOfDays = $_GET['numofdays'];
 
-    $read = "SELECT * FROM vehicle_table WHERE VehicleType = '$vehicleType'";
-    $result = mysqli_query($conn, $read);
-    $allData = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        $read = "SELECT * FROM vehicle_table WHERE VehicleType = '$vehicleType'";
+        $result = mysqli_query($conn, $read);
+        $allData = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }
+
+    // when you going to filter the results below code will run
+    if(isset($_GET["submit"])) 
+    {
+        $vehicleType = $_GET["type"];
+        $priceFrom = $_GET["priceFrom"];
+        $priceTo = $_GET["priceTo"];
+        $passengers = $_GET["passengers"];
+        $seats = $_GET["seats"];
+        $bags = $_GET["bags"];
+
+        $read = "SELECT * FROM vehicle_table 
+                WHERE VehicleType = '$vehicleType' 
+                AND DayCharge BETWEEN '$priceFrom' AND '$priceTo' 
+                AND Passengers >= '$passengers' 
+                AND Seats >= '$seats' 
+                AND Bags >= '$bags'";
+
+        // echo "<script>alert('".$type."')</script>";
+        $result = mysqli_query($conn, $read);
+        $allData = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -49,9 +75,9 @@
     </div>
     
     <!-- main body -->
-    <div class="mainBody">
+    <div class="mainBody" action="selectVehicle.php" method="GET">
         <!-- left side -->
-        <div class="mainBodyLeft">
+        <form class="mainBodyLeft">
 
             <!-- vehicle type selection -->
             <div class="vehicleType">
@@ -60,27 +86,27 @@
 
                     <!-- check boxes -->
                     <div class="vehicleTypeItem">
-                        <input type="checkbox" <?php if($vehicleType == 'SUV and Cabs'){echo "checked";} ?>>
+                        <input type="radio" name="type" value="SUV and Cabs" <?php if($vehicleType == 'SUV and Cabs'){echo "checked";} ?>>
                         SUV & Cabs
                     </div>
                     <div class="vehicleTypeItem">
-                        <input type="checkbox" <?php if($vehicleType == 'Cars'){echo "checked";} ?>>
+                        <input type="radio" name="type" value="Cars" <?php if($vehicleType == 'Cars'){echo "checked";} ?>>
                         Cars
                     </div>
                     <div class="vehicleTypeItem">
-                        <input type="checkbox" <?php if($vehicleType == 'Van and Busses'){echo "checked";} ?>>
+                        <input type="radio" name="type" value="Van and Busses" <?php if($vehicleType == 'Van and Busses'){echo "checked";} ?>>
                         Vans & Busses
                     </div>
                     <div class="vehicleTypeItem">
-                        <input type="checkbox" <?php if($vehicleType == 'Motorbikes'){echo "checked";} ?>>
+                        <input type="radio" name="type" value="Motorbikes" <?php if($vehicleType == 'Motorbikes'){echo "checked";} ?>>
                         MotorBikes
                     </div>
                     <div class="vehicleTypeItem">
-                        <input type="checkbox" <?php if($vehicleType == 'Tuk Tuk'){echo "checked";} ?>>
+                        <input type="radio" name="type" value="Tuk Tuk" <?php if($vehicleType == 'Tuk Tuk'){echo "checked";} ?>>
                         Tuk Tuks
                     </div>
                     <div class="vehicleTypeItem">
-                        <input type="checkbox" <?php if($vehicleType == 'Utility Vehicles'){echo "checked";} ?>>
+                        <input type="radio" name="type" value="Utility Vehicles" <?php if($vehicleType == 'Utility Vehicles'){echo "checked";} ?>>
                         Utility Vehicles
                     </div>
                 </div>
@@ -90,40 +116,34 @@
             <div class="vehiclePrice">
                 <div class="vehiclePriceTitle">Price</div>
                 <div class="vehiclePriceContainer">
-                    <input type="number" class="vehiclePriceItem" id="vehiclePriceFrom" placeholder="From">
-                    <input type="number" class="vehiclePriceItem" id="vehiclePriceTo" placeholder="To">
+                    <input type="number" class="vehiclePriceItem" id="vehiclePriceFrom" placeholder="From" name="priceFrom">
+                    <input type="number" class="vehiclePriceItem" id="vehiclePriceTo" placeholder="To" name="priceTo">
                 </div>
             </div>
 
             <!-- passengers -->
             <div class="passengersContainer">
                 <div class="passengersTitle">Passengers</div>
-                <input type="number" class="passengersInput">
+                <input type="number" class="passengersInput" name="passengers">
             </div>
             
             <!-- Seats -->
             <div class="seatsContainer">
                 <div class="seatsTitle">Seats</div>
-                <input type="number" class="seatsInput">
+                <input type="number" class="seatsInput" name="seats">
             </div>
             
             <!-- Bags -->
             <div class="bagsContainer">
                 <div class="bagsTitle">Bags</div>
-                <input type="number" class="bagsInput">
-            </div>
-
-            <!-- air condition -->
-            <div class="airConditionContainer">
-                <input type="radio" class="airButton" id="">
-                <div class="airTitle">Air Conditioning</div>
+                <input type="number" class="bagsInput" name="bags">
             </div>
 
             <!-- apply filters button -->
-            <button class="filterButton">Apply Filters</button>
+            <button type="submit" name="submit" class="filterButton">Apply Filters</button>
             <br>
             
-        </div>
+        </form>
 
         <!-- right side -->
         <div class="mainBodyRight">

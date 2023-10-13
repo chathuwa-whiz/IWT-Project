@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     include 'connect.php';
 
     // get old values to fields
@@ -45,11 +45,19 @@
         else {
             try {
                 mysqli_query($conn, $update);
-                echo "<script>
-                       if(confirm('User Details Updated!')) {
-                           location.href = 'adminDashboard.php';
-                       }
-                       </script>";
+                if($_SESSION) {
+                    echo "<script>
+                           if(confirm('User Details Updated!')) {
+                               location.href = 'userProfile.php';
+                           }
+                           </script>";
+                } else {
+                    echo "<script>
+                           if(confirm('User Details Updated!')) {
+                               location.href = 'adminUserDashboard.php';
+                           }
+                           </script>";
+                }
                 // header('location:adminDashboard.php');
                 
             } catch (mysqli_sql_exception $e) {

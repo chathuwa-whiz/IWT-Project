@@ -27,7 +27,7 @@
 
         <!-- heading center -->
         <div class="headingCenter">
-            <a class="headingCenterItem" href="#">Dashboard</a>
+            <a class="headingCenterItem" href="adminDashboard.php">Dashboard</a>
             <a class="headingCenterItem" href="adminVehicleDashboard.php">Vehicles</a>
             <a class="headingCenterItem" href="adminUserDashboard.php">Users</a>
             <a class="headingCenterItem" href="adminAddVehicle.php">New Vehicle</a>
@@ -35,7 +35,7 @@
 
         <!-- heading right -->
         <div class="headingRight">
-            <div class="headRightItem">Hotline +94 717654324</div>
+            <div class="headRightItem">Hellow Boss</div>
         </div>
     </div>
 

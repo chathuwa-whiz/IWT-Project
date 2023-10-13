@@ -38,7 +38,7 @@
 
         <!-- heading right -->
         <div class="headingRight">
-            <div class="headRightItem">Hotline +94 717654324</div>
+            <div class="headRightItem">Hellow Boss</div>
         </div>
     </div>
 

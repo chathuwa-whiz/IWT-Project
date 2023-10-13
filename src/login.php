@@ -21,6 +21,7 @@
         else if($data["Username"] == $username && $data["Password"] == $password)
         {
             $_SESSION["name"] = $data["Firstname"];
+            $_SESSION["userId"] = $data["UserID"];
             header("Location:../index.php");
         } else {
             echo "<script>alert('Username or Password incorrect');</script>";

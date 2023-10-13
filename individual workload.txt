@@ -1,0 +1,37 @@
+chathushka
+    crud : 
+
+gagana
+    crud :
+
+yasitha
+    crud : 
+
+hashini
+    crud :
+
+ayani
+    crud :
+
+
+admin
+    add vehicle - c
+    edit vehicle - u
+    delete vehicle - d
+    view vehicle - r
+
+    add user - c
+    edit user - u
+    delete user - d
+    view user - r
+
+Registered user
+    login (login.php page) - r
+    view vehicle (selectVehicle.php page) - r
+    send message(contactus page) - c
+    view profile (userProfile.php page) - r
+
+    add card details (payment.php page) - c
+    view card details (payment.php page) - r
+    edit card details (payment.php page) - u
+    delete card details (payment.php page) - d
