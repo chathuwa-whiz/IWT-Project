@@ -27,9 +27,9 @@
         <!-- heading center -->
         <div class="headingCenter">
             <a class="headingCenterItem" href="#">Home</a>
-            <a class="headingCenterItem" href="src/aboutus.html">About</a>
-            <a class="headingCenterItem" href="src/services.html">Services</a>
-            <a class="headingCenterItem" href="src/contactus.html">Contact</a>
+            <a class="headingCenterItem" href="src/aboutus.php">About</a>
+            <a class="headingCenterItem" href="src/services.php">Services</a>
+            <a class="headingCenterItem" href="src/contactus.php">Contact</a>
             <?php if($_SESSION){echo '<a class="headingCenterItem" href="src/userProfile.php">My Profile</a>';} ?>
         </div>
 

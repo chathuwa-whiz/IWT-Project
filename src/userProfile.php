@@ -38,15 +38,18 @@
 
         <!-- heading center -->
         <div class="headingCenter">
-            <a class="headingCenterItem" href="adminDashboard.php">Dashboard</a>
-            <a class="headingCenterItem" href="adminVehicleDashboard.php">Vehicles</a>
-            <a class="headingCenterItem" href="adminUserDashboard.php">Users</a>
-            <a class="headingCenterItem" href="adminAddVehicle.php">New Vehicle</a>
+            <a class="headingCenterItem" href="../index.php">Home</a>
+            <a class="headingCenterItem" href="aboutus.php">About</a>
+            <a class="headingCenterItem" href="services.php">Services</a>
+            <a class="headingCenterItem" href="contactus.php">Contact</a>
+            <?php if($_SESSION){echo '<a class="headingCenterItem" href="userProfile.php">My Profile</a>';} ?>
         </div>
 
         <!-- heading right -->
         <div class="headingRight">
-            <div class="headRightItem"><?php echo 'Hellow ' . $_SESSION["name"]; ?></div>
+            <div class="headRightItem">
+                <?php echo $_SESSION ? 'Hellow '.$_SESSION["name"].'' : 'Hotline +94 717654324'; ?>
+            </div>
         </div>
     </div>
 

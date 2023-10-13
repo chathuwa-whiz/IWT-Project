@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,14 +24,17 @@
         <!-- heading center -->
         <div class="headingCenter">
             <a class="headingCenterItem" href="../index.php">Home</a>
-            <a class="headingCenterItem" href="../src/aboutus.html">About</a>
-            <a class="headingCenterItem" href="../src/services.html">Services</a>
-            <a class="headingCenterItem" href="../src/contactus.html">Contact</a>
+            <a class="headingCenterItem" href="aboutus.php">About</a>
+            <a class="headingCenterItem" href="services.php">Services</a>
+            <a class="headingCenterItem" href="contactus.php">Contact</a>
+            <?php if($_SESSION){echo '<a class="headingCenterItem" href="userProfile.php">My Profile</a>';} ?>
         </div>
 
         <!-- heading right -->
         <div class="headingRight">
-            <div class="headRightItem">Hotline +94 717654324</div>
+            <div class="headRightItem">
+                <?php echo $_SESSION ? 'Hellow '.$_SESSION["name"].'' : 'Hotline +94 717654324'; ?>
+            </div>
         </div>
     </div>
 
