@@ -2,6 +2,16 @@
 
     session_start();
 
+    if(isset($_GET["vehicle_type"]))
+    {
+        if($_SESSION) {
+            header('Location: src/selectVehicle.php?vehicle_type='.$_GET["vehicle_type"].'&pickup_date='.$_GET["pickup_date"].'&return_date='.$_GET["return_date"].'&numofdays='.$_GET["numofdays"].'&pickup_time='.$_GET["pickup_time"].'&return_time='.$_GET["return_time"].'&location='.$_GET["location"].'');
+        }
+        else {
+            header("Location: src/login.php");
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +60,7 @@
             <video autoplay muted loop src="asset/home/home-background-video.mp4"></video>
 
             <!-- form -->
-            <form class="optionMenu" action="src/selectVehicle.php" method="GET">
+            <form class="optionMenu" action="index.php" method="GET">
                 <!-- pickup/return location -->
                 <label class="optionMenuText" for="">Pickup / Return Location</label><br>
                 <input type="text" placeholder="SLIIT Uni - Pittugala" class="optionMenuInput" name="location">

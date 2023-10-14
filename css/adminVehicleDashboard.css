@@ -112,6 +112,17 @@ body{
 .element button:hover{
     cursor: pointer;
 }
+/* Light mode styles */
+light-mode {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Dark mode styles */
+dark-mode {
+    background-color: #333;
+    color: #f5f5f5;
+}
 
 /* footer */
 .footer{

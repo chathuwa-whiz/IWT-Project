@@ -36,6 +36,8 @@
         <!-- heading right -->
         <div class="headingRight">
             <div class="headRightItem">Hellow Boss</div>
+            <script src="../script.js"></script>
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
         </div>
     </div>
 

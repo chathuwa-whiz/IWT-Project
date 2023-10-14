@@ -15,15 +15,15 @@ ayani
 
 
 admin
-    add vehicle - c
-    edit vehicle - u
-    delete vehicle - d
-    view vehicle - r
+    add vehicle (adminAddVehicle.php) - c
+    edit vehicle (editVehicle.php) - u
+    delete vehicle (deleteVehicle.php) - d
+    view vehicle (adminVehicleDashboard.php) - r
 
-    add user - c
-    edit user - u
-    delete user - d
-    view user - r
+    add user (signin.php) - c
+    edit user (editUser.php) - u
+    delete user (deleteUser.php) - d
+    view user (adminUserDashboard.pgp) - r
 
 Registered user
     login (login.php page) - r
@@ -35,3 +35,9 @@ Registered user
     view card details (payment.php page) - r
     edit card details (payment.php page) - u
     delete card details (payment.php page) - d
+
+other
+    aboutUs.php - r
+    adminDasboard.php - r
+    services.php - r
+    index.php - r

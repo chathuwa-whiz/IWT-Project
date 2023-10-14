@@ -155,8 +155,8 @@
                 // while($data = mysqli_fetch_assoc($result))
                 foreach($allData as $data)
                 {
-                    echo '
-                    <div class="itemContainer">
+                echo '
+                <div class="itemContainer">
                     <div class="itemCategory">MotorBikes</div>
                     <div class="itemImageContainer"></div>
                     <img class="itemImage" src="'.$data["Image"].'">
@@ -199,10 +199,9 @@
                         </div>
                     </div>
                     <div class="itemButtonContainer">
-                        <button class="itemButton">Book Now</button>
+                        <button class="itemButton" type="submit" onclick="location.href=\'payment.php?day_charge='.$data["DayCharge"].'&image='.$data["Image"].'&brand='.$data["Brand"].'&model='.$data["Model"].'&passengers='.$data["Passengers"].'&seats='.$data["Seats"].'&bags='.$data["Bags"].'&doors='.$data["Doors"].'&gear_type='.$data["GearType"].'&extra_charge='.$data["ExtraCharge"].'\'">Book Now</button>
                     </div>
-                </div>
-                    ';
+                </div>';
                 }
             ?>
             
