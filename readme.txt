@@ -1,5 +1,5 @@
 -----------autolanka----------------
-Follow the steps to run the project
+Follow these steps to run the project
   1. Download the project
   2. Extract the project
   3. Copy the project folder to the htdocs folder in xampp
