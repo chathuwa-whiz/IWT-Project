@@ -1,4 +1,14 @@
------------database name -> autolanka
+-----------autolanka----------------
+Follow the steps to run the project
+  1. Download the project
+  2. Extract the project
+  3. Copy the project folder to the htdocs folder in xampp
+  4. Open the xampp control panel and start the apache and mysql
+  5. Open the browser and type localhost/phpmyadmin
+  6. Create a database named autolanka
+  7. Import the sql files to the database (sql files are in the project folder) or run the follow table scripts in the sql tab in phpmyadmin
+  8. Open the browser and type localhost
+  9. Now you can use the project
 
 -----------table script----------------
 
