@@ -6,7 +6,10 @@
     $readUser = "SELECT * FROM user_table";
 
     $vehicleArray = mysqli_query($conn, $readVehicle);
-    $userArray = mysqli_query($conn, $readUser);  
+    $userArray = mysqli_query($conn, $readUser);
+
+    $vehicleData = mysqli_fetch_all($vehicleArray, MYSQLI_ASSOC);
+    $userData = mysqli_fetch_all($userArray, MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -48,8 +51,7 @@
         <!-- vehicle container -->
         <div class="container">
             <?php
-                for($i = 0; $i < 5; $i++){
-                    $vehicle = mysqli_fetch_assoc($vehicleArray);
+                foreach($vehicleData as $vehicle){
                     echo '
                         <div class="element">
                             <!-- left side contents -->
@@ -84,8 +86,7 @@
         <!-- users container -->
         <div class="container">
             <?php
-                for($i = 0; $i < 5; $i++){
-                    $user = mysqli_fetch_assoc($userArray);
+                foreach($userData as $user){
                     echo '
                         <div class="element">
                             <!-- left side contents -->

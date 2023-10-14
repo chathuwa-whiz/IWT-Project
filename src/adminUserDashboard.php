@@ -47,6 +47,7 @@
     
     <!-- items body -->
     <div class="container">
+        <script src="../script.js"></script>
         <?php
             while($user = mysqli_fetch_assoc($userArray)){
             echo '
@@ -66,7 +67,7 @@
                     <!-- right side contents -->
                     <div class="elementRight">
                         <button onclick="location.href=\'editUser.php?editUserId='.$user["UserID"].'\'" class="elementEdit">Edit</button>
-                        <button onclick="location.href=\'deleteUser.php?deleteUserId='.$user["UserID"].'\'" class="elementDelete">Delete</button>
+                        <button onclick="deleteUserConfirm('.$user["UserID"].')" class="elementDelete">Delete</button>
                     </div>
                 </div>
                 ';

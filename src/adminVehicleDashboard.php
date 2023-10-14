@@ -36,19 +36,12 @@
         <!-- heading right -->
         <div class="headingRight">
             <div class="headRightItem">Hellow Boss</div>
-            <script src="../script.js"></script>
-            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
         </div>
-    </div>
-
-    <!-- search bar -->
-    <div class="searchBar">
-        <input type="text">
-        <button type="submit">Search</button>
     </div>
     
     <!-- items body -->
     <div class="container">
+        <script src="../script.js"></script>
         <?php
             while($vehicle = mysqli_fetch_assoc($vehicleArray)){
                 echo '
@@ -68,7 +61,7 @@
                         <!-- right side contents -->
                         <div class="elementRight">
                             <button onclick="location.href=\'editVehicle.php?editVehicleId='.$vehicle["VehicleID"].'\'" class="elementEdit">Edit</button>
-                            <button onclick="location.href=\'deleteVehicle.php?deleteVehicleId='.$vehicle["VehicleID"].'\'" class="elementDelete">Delete</button>
+                            <button onclick="deleteConfirm('.$vehicle["VehicleID"].');" class="elementDelete">Delete</button>
                         </div>
                     </div>
                 ';

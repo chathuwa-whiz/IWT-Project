@@ -1,8 +1,18 @@
 //--------------------------------------------------------- Navod's js----------------------------------------------------------------
-function toggleDarkMode() {
-    const body = document.querySelector('body');
-    body.classList.toggle('dark-mode');
-    console.log(body.classList);
+function deleteVehicleConfirm(id) {
+    if(confirm("Are you sure you want to delete this record?")) {
+        window.location.href = 'deleteVehicle.php?deleteVehicleId='+id;
+    } else {
+        window.location.href = 'adminVehicleDashboard.php';
+    }
+}
+
+function deleteUserConfirm(id) {
+    if(confirm("Are you sure you want to delete this record?")) {
+        window.location.href = 'deleteUser.php?deleteUserId='+id;
+    } else {
+        window.location.href = 'adminUserDashboard.php';
+    }
 }
 
 
