@@ -1,5 +1,8 @@
 chathushka
-    crud : 
+    crud : add vehicle (adminAddVehicle.php) - c
+           edit vehicle (editVehicle.php) - u
+           delete vehicle (deleteVehicle.php) - d
+           view vehicle (adminVehicleDashboard.php) - r
 
 gagana
     crud :
@@ -15,11 +18,6 @@ ayani
 
 
 admin
-    add vehicle (adminAddVehicle.php) - c
-    edit vehicle (editVehicle.php) - u
-    delete vehicle (deleteVehicle.php) - d
-    view vehicle (adminVehicleDashboard.php) - r
-
     add user (signin.php) - c
     edit user (editUser.php) - u
     delete user (deleteUser.php) - d
