@@ -7,5 +7,5 @@
         mysqli_query($conn,$delete);
     }
 
-    header('location:index.php');
+    header('location:cardDashboard.php');
 ?>

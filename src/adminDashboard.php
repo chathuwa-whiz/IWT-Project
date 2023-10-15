@@ -2,8 +2,8 @@
     include 'connect.php';
 
     //read data from database
-    $readVehicle = "SELECT * FROM vehicle_table";
-    $readUser = "SELECT * FROM user_table";
+    $readVehicle = "SELECT * FROM vehicle_table LIMIT 5";
+    $readUser = "SELECT * FROM user_table LIMIT 5";
 
     $vehicleArray = mysqli_query($conn, $readVehicle);
     $userArray = mysqli_query($conn, $readUser);

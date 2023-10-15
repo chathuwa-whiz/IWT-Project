@@ -3,8 +3,8 @@
 
     if(isset($_GET["updateCardId"]))
     {
+        $id = $_GET["updateCardId"];
         setcookie('updateID', $_GET["updateCardId"], time() + (86400), '/');
-        $id = $_COOKIE["updateID"];
 
         $read ="SELECT * FROM payment WHERE ID = $id";
 

@@ -102,17 +102,17 @@
         <!-- Day Charge -->
         <div class="extra">
             <label for="extra">Rupees per Day</label>
-            <input type="number" placeholder="800" name="dayCharge">
+            <input type="number" placeholder="800" name="dayCharge" value = <?php echo $data["DayCharge"]; ?>>
         </div>
         <!-- Passengers -->
         <div class="extra">
             <label for="extra">Number of Passengers</label>
-            <input type="number" placeholder="4" name="passengers">
+            <input type="number" placeholder="4" name="passengers" value = <?php echo $data["Passengers"]; ?>>
         </div>
         <!-- Doors -->
         <div class="extra">
             <label for="extra">Doors</label>
-            <input type="number" placeholder="4" name="doors">
+            <input type="number" placeholder="4" name="doors" value = <?php echo $data["Doors"]; ?>>
         </div>
         <!-- gear -->
         <div class="gear">

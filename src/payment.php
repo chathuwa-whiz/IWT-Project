@@ -11,7 +11,7 @@
     $doors = $_GET["doors"];
     $gearType = $_GET["gear_type"];
     $extraCharge = $_GET["extra_charge"];
-    $numOfDays = $_GET["numofdays"];
+    $numOfDays = $_COOKIE["no_of_days"];
 ?>
 
 <!DOCTYPE html>

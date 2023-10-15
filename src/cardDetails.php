@@ -95,7 +95,7 @@
                 </div>
                 <div class="inputBox">
                     <span>name on card :</span>
-                    <input type="text" placeholder="Card Type"id="cardtype" name="nameofcard">
+                    <input type="text" placeholder="Name on Card"id="cardtype" name="nameofcard">
                 </div>
                 <div class="inputBox">
                     <span>credit card number :</span>

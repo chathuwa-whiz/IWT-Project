@@ -11,10 +11,13 @@
         $extraRs =$_POST['extra'];
         $gear = $_POST['gear'];
         $type = $_POST['type'];
+        $passengers = $_POST['passengers'];
+        $doors = $_POST['doors'];
+        $dayCharge = $_POST['dayCharge'];
         $airCondition =  $_POST['airCondition'];
 
-        $sql = "INSERT INTO vehicle_table (Brand, Model, Image, Bags, Seats, AirCondition, VehicleType, GearType, ExtraCharge)
-                VALUES ('$brand' , '$model' , '$image' , '$bags' , '$seat' , '$airCondition' , '$type' , '$gear', '$extraRs')";
+        $sql = "INSERT INTO vehicle_table (Brand, Model, Image, Bags, Seats, AirCondition, VehicleType, GearType, ExtraCharge, Passengers, Doors, DayCharge)
+                VALUES ('$brand' , '$model' , '$image' , '$bags' , '$seat' , '$airCondition' , '$type' , '$gear', '$extraRs', '$passengers', '$doors', '$dayCharge')";
         
         try {
             mysqli_query($conn, $sql);
