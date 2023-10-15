@@ -3,7 +3,11 @@ chathushka
            edit vehicle (editVehicle.php) - u
            delete vehicle (deleteVehicle.php) - d
            view vehicle (adminVehicleDashboard.php) - r
+
            adminDasboard.php - r
+           view vehicle (selectVehicle.php page) - r
+           view profile (userProfile.php page) - r
+           login (login.php page) - r
 
 gagana
     crud : employ create account (employCreate.php) - c
@@ -32,7 +36,7 @@ admin
     view user (adminUserDashboard.pgp) - r
 
 Registered user
-    login (login.php page) - r
-    view vehicle (selectVehicle.php page) - r
-    send message(contactus page) - c
-    view profile (userProfile.php page) - r
+    send message(contactus.php page) - c
+    read previous messages (contactus.php page) - r
+    delete message (contactus_delete) - d
+    update message (contactus_update) - u

@@ -97,6 +97,35 @@ body{
     font-weight: bold;
     margin-right: 10px;
 }
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+table, th, td{
+    padding: 10px;
+}
+td{
+    text-align: center;
+}
+tr:nth-child(even){
+    background-color: rgb(225, 224, 251);
+}
+tr:nth-child(odd){
+    background-color: white;
+}
+button{
+    background-color: rgb(246, 57, 139);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(90,86,214);
+}
+
 @media screen and (max-width: 1000px){
     .body{display: block;}
 }

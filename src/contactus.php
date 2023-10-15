@@ -1,5 +1,21 @@
 <?php
     session_start();
+    include 'connect.php';
+
+    if(isset($_POST['submit'])){
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $subject = $_POST['subject'];
+        $msg = $_POST['msg'];
+
+        $sql = "INSERT INTO contact (name, email, subject, msg) VALUES ('$name', '$email', '$subject', '$msg')";
+        $result = mysqli_query($conn, $sql);
+        if($result){
+            echo '<script>alert("Message sent successfully")</script>';
+        }else{
+            echo '<script>alert("Message sending failed")</script>';
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -43,20 +59,20 @@
         <!-- left side -->
         <div class="bodyLeft">
             <div class="bodyLeftTitle">Send us a message</div>
-            <form class="contactForm">
+            <form class="contactForm" method="POST" action="contactus.php">
                 <label class="contactFormLabel">Name</label><br>
-                <input type="text" class="contactFormInput"><br>
+                <input type="text" class="contactFormInput" name="name"><br>
 
                 <label class="contactFormLabel">Email</label><br>
-                <input type="text" class="contactFormInput"><br>
+                <input type="text" class="contactFormInput" name="email"><br>
 
                 <label class="contactFormLabel">Subject</label><br>
-                <input type="text" class="contactFormInput"><br>
+                <input type="text" class="contactFormInput" name="subject"><br>
 
                 <label class="contactFormLabel">Message</label><br>
-                <textarea class="contactFormInput" id="" cols="30" rows="10"></textarea>
+                <textarea class="contactFormInput" id="" cols="30" rows="10" name="msg"></textarea>
 
-                <button class="contactFormSubmitButton" onclick="">Send Message</button>
+                <button class="contactFormSubmitButton" onclick="" name="submit" type="submit">Send Message</button>
             </form>
         </div>
 
@@ -88,6 +104,24 @@
                     <span class="details">www.autolanka.com</span>
                 </div>
             </div>
+
+            <!-- show previous messages -->
+            <table>
+                <?php
+                    $sql = "SELECT * FROM contact";
+                    $result = mysqli_query($conn, $sql);
+                    if(mysqli_num_rows($result) > 0){
+                        while($row = mysqli_fetch_assoc($result)){
+                            echo '<tr>';
+                            echo '<td>'.$row['name'].'</td>';
+                            echo '<td>'.$row['email'].'</td>';
+                            echo '<td><button onclick="location.href=\'contactus_update.php?id='.$row["id"].'\'">Update</button></td>';
+                            echo '<td><button onclick="location.href=\'contactus_delete.php?id='.$row["id"].'\'">Delete</button></td>';
+                            echo '</tr>';
+                        }
+                    }
+                ?>
+            </table>
         </div>
     </div>
 

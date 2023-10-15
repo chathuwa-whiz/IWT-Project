@@ -1,166 +1,113 @@
 *{
-    font-family: Arial;
-  }
-  body{
-    margin: 0px;
-  }
-  
-  /* head section */
-  .head{
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 1px 1px 5px rgb(128, 128, 128);
-  }
-  .headingLogo{
-    height: 100px;
-    margin: 10px 0px 10px 40px;
-  }
-  .headingCenter{
-    display: flex;
-  }
-  .headingCenterItem{
-    color: black;
-    text-decoration: none;
-    font-size: 17px;
-    margin: 0px 20px;
-    font-family: Arial;
-    font-weight: 600;
-  }
-  .headingRight{
-    margin-right: 40px;
-    color: rgb(31, 31, 31);
-    font-size: 17px;
-    font-family: Arial;
-    font-weight: 600;
-  }
-  
-    /* body section */
-  
-  /* Style for the container */
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  /* Style for the left side image */
-  .image-container {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .image-container img {
-    width: 100%;
-    height: auto;
-  }
-  
-  /* Style for the right side product details */
-  .details-container {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  
-  .product-name {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .product-description {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .payment{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-  }
-  .payment p {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .payment button{
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(90,86,214);
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .payment button:hover{
-    cursor: pointer;
-    background-color: rgb(246, 57, 139);
-  }
-  
-
-  /* card dashboard */
-  .mainBody {
-    font-family: Arial;
-    display: flex;
-    flex-direction: column;
-   
+  font-family: Arial;
+}
+body{
+  margin: 0px;
 }
 
-.pay {
-    background-color: rgb(189, 168, 212);
-    width: 200px;
-    border: 1px solid rgb(204, 195, 210); 
-    padding: 10px; 
-    margin: 10px;
-    border-radius: 10px; 
-    
+/* head section */
+.head{
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 1px 1px 5px rgb(128, 128, 128);
+}
+.headingLogo{
+  height: 100px;
+  margin: 10px 0px 10px 40px;
+}
+.headingCenter{
+  display: flex;
+}
+.headingCenterItem{
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+  margin: 0px 20px;
+  font-family: Arial;
+  font-weight: 600;
+}
+.headingRight{
+  margin-right: 40px;
+  color: rgb(31, 31, 31);
+  font-size: 17px;
+  font-family: Arial;
+  font-weight: 600;
 }
 
-.save {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 50px;
-    width: 50%;
+  /* body section */
+
+/* Style for the container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.submit-btn {
-    margin: 10px;
-    padding: 10px 20px; 
-    border: none; 
-    background-color: rgb(111, 68, 128); 
-    color: white; 
-    border-radius: 5px; 
-}
-.box{
-    border-radius: 10px;
-    margin: 5px;
-    align-self: center;
-    background-color: rgb(168, 111, 221);
-    
-}
-.payBtn{
-    margin: 10px;
-    padding: 10px 20px; 
-    border: none; 
-    background-color: rgb(111, 68, 128); 
-    color: white; 
-    border-radius: 5px; 
-    align-self: center;
+/* Style for the left side image */
+.image-container {
+  flex: 1;
+  padding: 20px;
 }
 
-  /* footer */
-  .footer{
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial;
-    box-shadow: 1px 1px 5px rgb(128, 128, 128);
-  }
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style for the right side product details */
+.details-container {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.product-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.payment{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+.payment p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.payment button{
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(90,86,214);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+.payment button:hover{
+  cursor: pointer;
+  background-color: rgb(246, 57, 139);
+}
+/* footer */
+.footer{
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial;
+  box-shadow: 1px 1px 5px rgb(128, 128, 128);
+}
