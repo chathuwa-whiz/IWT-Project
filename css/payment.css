@@ -103,6 +103,58 @@
     background-color: rgb(246, 57, 139);
   }
   
+
+  /* card dashboard */
+  .mainBody {
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.pay {
+    background-color: rgb(189, 168, 212);
+    width: 200px;
+    border: 1px solid rgb(204, 195, 210); 
+    padding: 10px; 
+    margin: 10px;
+    border-radius: 10px; 
+    
+}
+
+.save {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    width: 50%;
+}
+
+.submit-btn {
+    margin: 10px;
+    padding: 10px 20px; 
+    border: none; 
+    background-color: rgb(111, 68, 128); 
+    color: white; 
+    border-radius: 5px; 
+}
+.box{
+    border-radius: 10px;
+    margin: 5px;
+    align-self: center;
+    background-color: rgb(168, 111, 221);
+    
+}
+.payBtn{
+    margin: 10px;
+    padding: 10px 20px; 
+    border: none; 
+    background-color: rgb(111, 68, 128); 
+    color: white; 
+    border-radius: 5px; 
+    align-self: center;
+}
+
   /* footer */
   .footer{
     height: 70px;

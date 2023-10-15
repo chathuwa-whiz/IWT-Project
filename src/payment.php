@@ -11,6 +11,7 @@
     $doors = $_GET["doors"];
     $gearType = $_GET["gear_type"];
     $extraCharge = $_GET["extra_charge"];
+    $numOfDays = $_GET["numofdays"];
 ?>
 
 <!DOCTYPE html>
@@ -88,8 +89,8 @@
                     </table>
                 </div>
                 <div class="payment">
-                    <p>RS: <?php echo $chargeAmount;?></p>
-                    <button onclick="location.href='cardDetails.php?amount=<?php echo $chargeAmount;?>';">Pay now</button>
+                    <p>RS: <?php echo $chargeAmount*$numOfDays;?></p>
+                    <button onclick="location.href='cardDetails.php';">Pay now</button>
                 </div>
             </div>
         </div>

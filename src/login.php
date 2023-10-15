@@ -26,7 +26,22 @@
         } else {
             echo "<script>alert('Username or Password incorrect');</script>";
         }
+
+        // get all employees from database
+        $readEmp = "SELECT * FROM employ WHERE username = '$username' && password = '$password'";
+        $queryEmp = mysqli_query($conn, $readEmp);
+        $dataEmp = mysqli_fetch_assoc($queryEmp);
+
+        if($dataEmp["username"] == $username && $dataEmp["password"] == $password)
+        {
+            $_SESSION["name"] = $dataEmp["firstname"];
+            $_SESSION["emp_id"] = $dataEmp["id"];
+            header("Location:employDashboard.php");
+        } else {
+            echo "<script>alert('Username or Password incorrect');</script>";
+        }
     }
+    mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
@@ -73,7 +88,9 @@
         <!-- to create account -->
         <div class="createAcc">
             Don't have an account? 
-            <a href="signin.php">Create Account</a>
+            <a href="signin.php">Create Account</a> <br><br>
+
+            <center><a href="employSignin.php">Signin as an Employee</a></center>
         </div>
         
     </div>

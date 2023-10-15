@@ -1,8 +1,21 @@
 <?php
     include 'connect.php';
 
+    if(isset($_GET["updateCardId"]))
+    {
+        setcookie('updateID', $_GET["updateCardId"], time() + (86400), '/');
+        $id = $_COOKIE["updateID"];
+
+        $read ="SELECT * FROM payment WHERE ID = $id";
+
+        $sql = mysqli_query($conn, $read);
+
+        $data = mysqli_fetch_assoc($sql);
+    }
+
     if(isset($_POST["submit"]))
     {
+        $id = $_COOKIE["updateID"];
         $firstname = $_POST["firstname"];
         $lastname = $_POST["lastname"];
         $email = $_POST["email"];
@@ -11,22 +24,21 @@
         $monthyear = $_POST["monthyear"];
         $CVV = $_POST["CVV"];
 
-        $create = "INSERT INTO payment (First_Name, Last_Name, Email, NAME_ON_CARD, CREDIT_CARD_NUMBER, EXP_MONTH_YEAR, CVV) VALUES ('$firstname','$lastname','$email','$nameofcard','$number','$monthyear','$CVV')";
+        $update = "UPDATE payment 
+                   SET First_Name='$firstname',Last_Name='$lastname',Email='$email',NAME_ON_CARD='$nameofcard',CREDIT_CARD_NUMBER='$number',EXP_MONTH_YEAR='$monthyear',CVV='$CVV' 
+                   WHERE ID = $id";
+        mysqli_query($conn,$update);
 
         try {
-            $sql = mysqli_query($conn, $create);
-            echo "<script>
-                if(confirm('Card Details Saved')) {
-                    location.href = 'cardDashboard.php';
-                } 
-                else {
-                    location.href = 'payment.php';
-                }
-                </script>";
-        } catch (mysqli_sql_exception) {
-            echo "<script>alert('data not saved');</script>";
+            mysqli_query($conn,$update);
+            echo"<script>if(confirm('card detail updated')){location.href='cardDashboard.php';}</script>";
+        } catch (mysqli_sql_execption) {
+            echo"<script>if(confirm('card detail not updated')){location.href='cardDashboard.php';}</script>";
         }
     }
+    mysqli_close($conn);
+
+    // $amount = $_GET['amount'];
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +55,7 @@
 
 <div class="container">
     <script src="script.js"></script>
-    <form method="POST" action="cardDetails.php">
+    <form method="POST" action="cardUpdate.php">
 
         <div class="row">
 
@@ -53,15 +65,15 @@
 
                 <div class="inputBox">
                     <span>First name :</span>
-                    <input type="text" placeholder="First  Name" id="firstname" name="firstname">
+                    <input type="text" placeholder="First  Name" id="firstname" name="firstname" value=<?php echo $data["First_Name"];?>>
                 </div>
                 <div class="inputBox">
                     <span>Last name :</span>
-                    <input type="text" placeholder="Last  Name"id="lastname" name="lastname">
+                    <input type="text" placeholder="Last  Name"id="lastname" name="lastname"value=<?php echo $data["Last_Name"];?>>
                 </div>
                 <div class="inputBox">
                     <span>email :</span>
-                    <input type="email" placeholder="example@example.com"id="email" name="email">
+                    <input type="email" placeholder="example@example.com"id="email" name="email"value=<?php echo $data["Email"];?>>
                 </div>
                 <div class="inputBox">
                     <span>address :</span>
@@ -95,26 +107,26 @@
                 </div>
                 <div class="inputBox">
                     <span>name on card :</span>
-                    <input type="text" placeholder="Card Type"id="cardtype" name="nameofcard">
+                    <input type="text" placeholder="Card Type"id="cardtype" name="nameofcard"value=<?php echo $data["NAME_ON_CARD"];?>>
                 </div>
                 <div class="inputBox">
                     <span>credit card number :</span>
-                    <input type="number" placeholder="1111 2222 3333 4444"id="number"name="number">
+                    <input type="number" placeholder="1111 2222 3333 4444"id="number"name="number"value=<?php echo $data["CREDIT_CARD_NUMBER"];?>>
                 </div>
                 <div class="inputBox">
                     <span>exp month/year :</span>
-                    <input type="month" placeholder="january"id="month"name="monthyear">
+                    <input type="month" placeholder="january"id="month"name="monthyear"value=<?php echo $data["EXP_MONTH_YEAR"];?>>
                 </div>
 
                 
                  <div class="inputBox">
                         <span>CVV :</span>
-                        <input type="text" placeholder="123"id="cvv" name="CVV">
+                        <input type="text" placeholder="123"id="cvv" name="CVV"value=<?php echo $data["CVV"];?>>
                     </div>
                 </div>
             </div>
 
-            <button type="submit" class="submit-btn" name="submit">save & proceed</button>
+            <button type="submit" class="submit-btn" name="submit">Update</button>
     
         </div>
 

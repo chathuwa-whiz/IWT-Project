@@ -1,0 +1,122 @@
+*{
+    font-family: Arial;
+}
+body{
+    margin: 0px;
+}
+
+/* head section */
+.head{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 1px 5px rgb(128, 128, 128);
+}
+.headingLogo{
+    height: 100px;
+    margin: 10px 0px 10px 40px;
+}
+.headingCenter{
+    display: flex;
+}
+.headingCenterItem{
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0px 20px;
+    font-family: Arial;
+    font-weight: 600;
+}
+.headingRight{
+    margin-right: 40px;
+    color: rgb(31, 31, 31);
+    font-size: 17px;
+    font-family: Arial;
+    font-weight: 600;
+}
+
+/* body */
+.mainBody{
+    display: flex;
+    padding-bottom: 200px;
+}
+
+/*----------- body left -----------*/
+.bodyLeft{
+    padding: 50px 0px 0px 50px;
+    flex: 9;
+}
+.bodyLeftTitle{
+    font-size: 30px;
+    font-weight: bold;
+}
+.bodyLeft form{
+    background-color: rgb(192, 191, 236);
+    width: 80%;
+    margin-top: 30px;
+}
+.formDetails{
+    display: flex;
+    justify-content: space-between;
+}
+.formDetails label{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 20px;
+}
+.formDetails input{
+    width: 80%;
+    height: 30px;
+    border: none;
+    margin: 20px;
+    padding-left: 10px;
+    background-color: white;
+}
+.formDetails button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: rgb(90,86,214);
+    color: white;
+    font-weight: bold;
+    margin: 20px;
+}
+
+/*--------------- body right --------------*/
+.bodyRight{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 50px 0px 0px;
+}
+.bodyRight button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: rgb(90,86,214);
+    color: white;
+    font-weight: bold;
+    margin: 20px;
+}
+.bodyRight button:hover{
+    cursor: pointer;
+    background-color: rgb(246, 57, 139);
+}
+.bodyRight input{
+    width: 100%;
+    height: 30px;
+    margin: 20px;
+    padding-left: 10px;
+}
+
+/* footer */
+.footer{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial;
+    box-shadow: 1px 1px 5px rgb(128, 128, 128);
+}

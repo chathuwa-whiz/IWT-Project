@@ -73,7 +73,7 @@
                         <label class="optionMenuText" for="">Return Date</label><br>
                         <input class="optionMenuInput" type="date" placeholder="06/08/2023" name="return_date"><br>
                         <label class="optionMenuText" for="">Number of Days</label><br>
-                        <input class="optionMenuInput" type="number" placeholder="03" name="numofdays">
+                        <input class="optionMenuInput" type="number" placeholder="03" name="numofdays" value=1>
                     </div>
                     <!-- pickup/return time/vehicle type -->
                     <div class="optionMenuRight">

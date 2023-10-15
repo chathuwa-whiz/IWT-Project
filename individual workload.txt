@@ -3,12 +3,20 @@ chathushka
            edit vehicle (editVehicle.php) - u
            delete vehicle (deleteVehicle.php) - d
            view vehicle (adminVehicleDashboard.php) - r
+           adminDasboard.php - r
 
 gagana
-    crud :
+    crud : employ create account (employCreate.php) - c
+           update employ (employUpdate.php) - u
+           delete employ (employDelete.php) - d
+           view employ (employDashboard.php) - r
 
 yasitha
-    crud : 
+    crud : add card details (cardDetails.php page) - c
+           view card details (cardDashboard.php page) - r
+           edit card details (cardUpdate.php page) - u
+           delete card details (cardDelete.php page) - d
+           payment.php
 
 hashini
     crud :
@@ -28,14 +36,3 @@ Registered user
     view vehicle (selectVehicle.php page) - r
     send message(contactus page) - c
     view profile (userProfile.php page) - r
-
-    add card details (payment.php page) - c
-    view card details (payment.php page) - r
-    edit card details (payment.php page) - u
-    delete card details (payment.php page) - d
-
-other
-    aboutUs.php - r
-    adminDasboard.php - r
-    services.php - r
-    index.php - r
