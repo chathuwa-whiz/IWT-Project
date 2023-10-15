@@ -1,37 +1,34 @@
-chathushka
-    crud : add vehicle (adminAddVehicle.php) - c
-           edit vehicle (editVehicle.php) - u
-           delete vehicle (deleteVehicle.php) - d
-           view vehicle (adminVehicleDashboard.php) - r
+--chathushka--
+add vehicle (adminAddVehicle.php) - c
+edit vehicle (editVehicle.php) - u
+delete vehicle (deleteVehicle.php) - d
+view vehicle (adminVehicleDashboard.php) - r
+adminDasboard.php - r
+view vehicle (selectVehicle.php page) - r
+view profile (userProfile.php page) - r
+login (login.php page) - r
 
-           adminDasboard.php - r
-           view vehicle (selectVehicle.php page) - r
-           view profile (userProfile.php page) - r
-           login (login.php page) - r
+--gagana--
+employ create account (employCreate.php) - c
+update employ (employUpdate.php) - u
+delete employ (employDelete.php) - d
+view employ (employDashboard.php) - r
 
-gagana
-    crud : employ create account (employCreate.php) - c
-           update employ (employUpdate.php) - u
-           delete employ (employDelete.php) - d
-           view employ (employDashboard.php) - r
+--yasitha--
+add card details (cardDetails.php page) - c
+view card details (cardDashboard.php page) - r
+edit card details (cardUpdate.php page) - u
+delete card details (cardDelete.php page) - d
+payment.php
 
-yasitha
-    crud : add card details (cardDetails.php page) - c
-           view card details (cardDashboard.php page) - r
-           edit card details (cardUpdate.php page) - u
-           delete card details (cardDelete.php page) - d
-           payment.php
+--hashini--
+add user (signin.php) - c
+edit user (editUser.php) - u
+delete user (deleteUser.php) - d
+view user (adminUserDashboard.pgp) - r
 
-hashini
-    crud :
-        add user (signin.php) - c
-        edit user (editUser.php) - u
-        delete user (deleteUser.php) - d
-        view user (adminUserDashboard.pgp) - r
-
-ayani
-    crud :
-        send message(contactus.php page) - c
-        read previous messages (contactus.php page) - r
-        delete message (contactus_delete) - d
-        update message (contactus_update) - u
+--ayani--
+send message(contactus.php page) - c
+read previous messages (contactus.php page) - r
+update message (contactus_update) - u
+delete message (contactus_delete) - d
