@@ -24,19 +24,14 @@ yasitha
 
 hashini
     crud :
+        add user (signin.php) - c
+        edit user (editUser.php) - u
+        delete user (deleteUser.php) - d
+        view user (adminUserDashboard.pgp) - r
 
 ayani
     crud :
-
-
-admin
-    add user (signin.php) - c
-    edit user (editUser.php) - u
-    delete user (deleteUser.php) - d
-    view user (adminUserDashboard.pgp) - r
-
-Registered user
-    send message(contactus.php page) - c
-    read previous messages (contactus.php page) - r
-    delete message (contactus_delete) - d
-    update message (contactus_update) - u
+        send message(contactus.php page) - c
+        read previous messages (contactus.php page) - r
+        delete message (contactus_delete) - d
+        update message (contactus_update) - u
