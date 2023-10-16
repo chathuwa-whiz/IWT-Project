@@ -41,7 +41,7 @@
     <!-- body -->
     <div class="section">
         <div class="title">
-            <h1>About Us</h1>
+            <h1>Services</h1>
         </div>
 
         <!-- first row -->
@@ -52,8 +52,8 @@
                 <div class="icon">
                     <i class="fas fa-calendar"></i>&nbsp;<br><br>
                 </div>
-                <h2>Mission</h2>
-                <p>Auto Lanka Car Rental Service is your trusted partner in sustainable travel, providing innovative and customer-centric.</p>
+                <h2>Insurance</h2>
+                <p>Auto Lanka provide 24x7 Customer Support, Fast & Easy Claims and instant Online Policy.</p>
                 <a href="#" class="button">Read More</a>
             </div>
 
@@ -62,8 +62,8 @@
                 <div class="icon">
                     <i class="fas fa-key"></i>&nbsp;<br><br>
                 </div>
-                <h2>Vision</h2>
-                <p>We envision a future where Auto Lanka Car Rental is the epitome of convenience and sustainability in travel..</p>
+                <h2>Wedding</h2>
+                <p>Auto Lanka are the pioneers for wedding car hire Sri Lanka services with a proven track record of being well geared for weddings, corporate & VIP events, celebrity events, motor cades and any other special occasions.</p>
                 <a href="#" class="button">Read More</a>
             </div>
 
@@ -72,7 +72,7 @@
                 <div class="icon">
                     <i class="fas fa-medal"></i>&nbsp;<br><br>
                 </div>
-                <h2>Archivment</h2>
+                <h2>VIP</h2>
                 <p>Auto Lanka Car Rental Service has expanded globally, offering convenient access in major cities worldwide.."</p>
                 <a href="#" class="button">Read More</a>
             </div>
